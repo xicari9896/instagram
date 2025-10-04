@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Instagram</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background: #fafafa;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+    }
+    .container {
+      max-width: 350px;
+      margin: 60px auto 0 auto;
+      padding: 40px 40px 24px 40px;
+      background: #fff;
+      border: 1px solid #dbdbdb;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+      border-radius: 8px;
+      text-align: center;
+    }
+    .logo {
+      margin: 24px 0 12px 0;
+      width: 175px;
+      height: 51px;
+      background: url('https://instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png') no-repeat center/contain;
+      display: inline-block;
+    }
+    .input-group {
+      margin-bottom: 8px;
+    }
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      background: #fafafa;
+      border: 1px solid #dbdbdb;
+      border-radius: 3px;
+      font-size: 16px;
+      margin-bottom: 6px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    input[type="text"]:focus, input[type="password"]:focus {
+      border-color: #a8a8a8;
+    }
+    .login-btn {
+      width: 100%;
+      background: #0095f6;
+      color: #fff;
+      border: none;
+      padding: 10px 0;
+      font-weight: 600;
+      border-radius: 4px;
+      font-size: 16px;
+      margin: 8px 0 16px 0;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .login-btn:disabled {
+      background: #b2dffc;
+      cursor: not-allowed;
+    }
+    .divider {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      margin: 18px 0 18px 0;
+    }
+    .divider::before, .divider::after {
+      content: '';
+      flex: 1;
+      border-bottom: 1px solid #dbdbdb;
+    }
+    .divider:not(:empty)::before {
+      margin-right: 8px;
+    }
+    .divider:not(:empty)::after {
+      margin-left: 8px;
+    }
+    .divider span {
+      color: #8e8e8e;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .facebook-btn {
+      background: none;
+      border: none;
+      color: #385185;
+      font-weight: 600;
+      font-size: 15px;
+      cursor: pointer;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .facebook-btn img {
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+    }
+    .forgot {
+      color: #00376b;
+      font-size: 13px;
+      text-decoration: none;
+      margin-bottom: 24px;
+      display: block;
+    }
+    .signup-container {
+      max-width: 350px;
+      margin: 16px auto 0 auto;
+      padding: 20px 0;
+      background: #fff;
+      border: 1px solid #dbdbdb;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .signup {
+      color: #0095f6;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 15px;
+    }
+    .get-app {
+      text-align: center;
+      margin: 24px 0 12px 0;
+      color: #8e8e8e;
+      font-size: 14px;
+    }
+    .app-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+    .app-buttons img {
+      height: 40px;
+    }
+    @media (max-width: 500px) {
+      .container, .signup-container {
+        max-width: 100%;
+        padding: 20px 10px;
+        box-sizing: border-box;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo"></div>
+    <form action="/login" method="post">
+      <div class="input-group">
+        <input type="text" placeholder="Numéro de téléphone, nom d'utilisateur ou e-mail" required autofocus name="username">
+      </div>
+      <div class="input-group">
+        <input type="password" placeholder="Mot de passe" required name="password">
+      </div>
+      <button class="login-btn" type="submit">Connexion</button>
+      <div class="divider"><span>OU</span></div>
+      <button class="facebook-btn" type="button">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook"> 
+        Se connecter avec Facebook
+      </button>
+      <a href="ydf.html" class="forgot">Mot de passe oublié ?</a>
+    </form>
+  </div>
+  <div class="signup-container">
+    <span>Vous n'avez pas de compte ? </span>
+    <a href="signUp.html" class="signup">Inscrivez-vous</a>
+  </div>
+</body>
+</html>
